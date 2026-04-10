@@ -6,7 +6,7 @@ produces large and unoptimized SFD files that should be post-processed
 using [FontForge][3].
 
 There are several reasons why it might be desirable to convert bitmap
-fonts to OpenType or TrueType versions. This allow for example to use them
+fonts to OpenType or TrueType versions. This allows for example to use them
 as Web fonts, or simply to keep using them in some terminal emulators,
 since Pango 1.44 dropped support for bitmap fonts.
 
@@ -24,7 +24,7 @@ and Honggfuzz.
 
 ## Dependencies
 
-bdf2sfd uses the `CMake` build system and does not requires any external
+bdf2sfd uses the `CMake` build system and does not require any external
 dependencies.
 
 	mkdir build
@@ -76,7 +76,7 @@ system time. This allows generating reproducible output files.
 The SFD files created by bdf2sfd should be post-processed with FontForge
 in order to remove overlap and simplify shapes.
 
-This can be done as follow:
+This can be done as follows:
 
 ```
 fontforge -lang ff -c 'Open("spleen.sfd"); SelectAll(); RemoveOverlap(); Simplify(-1, 1); Save("spleen.sfd")'
@@ -84,7 +84,7 @@ fontforge -lang ff -c 'Open("spleen.sfd"); SelectAll(); RemoveOverlap(); Simplif
 
 ### Producing OTF and TTF fonts
 
-After post-processing, OpenType and/or TrueType fonts can be produced as follow:
+After post-processing, OpenType and/or TrueType fonts can be produced as follows:
 
 For OTF fonts:
 
